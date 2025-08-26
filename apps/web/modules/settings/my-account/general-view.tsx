@@ -25,6 +25,8 @@ import { revalidateTravelSchedules } from "@calcom/web/app/cache/travelSchedule"
 
 import TravelScheduleModal from "@components/settings/TravelScheduleModal";
 
+import TimezoneBandSVG from "./TimezoneBandSVG";
+
 export type FormValues = {
   locale: {
     value: string;
@@ -196,6 +198,12 @@ const GeneralView = ({ user, travelSchedules }: GeneralViewProps) => {
                       if (event) formMethods.setValue("timeZone", event.value, { shouldDirty: true });
                     }}
                   />
+
+                  {value && (
+                    <div className="mt-4">
+                      <TimezoneBandSVG timeZone={value} className="w-full max-w-3xl" />
+                    </div>
+                  )}
                 </>
               )}
             />
