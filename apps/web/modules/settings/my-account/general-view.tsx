@@ -25,7 +25,7 @@ import { revalidateTravelSchedules } from "@calcom/web/app/cache/travelSchedule"
 
 import TravelScheduleModal from "@components/settings/TravelScheduleModal";
 
-import TimezoneBandSVG from "./TimezoneBandSVG";
+import TimezoneBandSVG from "./components/timeZone/TimezoneBandSVG";
 
 export type FormValues = {
   locale: {
